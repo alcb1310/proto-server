@@ -6,3 +6,6 @@ run: build
 
 watch:
 	air
+
+build_proto:
+	protoc --go_out=. --go_opt=paths=source_relative cmd/schemas/*.proto
