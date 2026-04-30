@@ -9,6 +9,7 @@ message Book {
   string title = 2;
   repeated Author authors = 3;
   Publisher publisher = 4;
+  Genre genre = 5;
 }
 
 message Books {

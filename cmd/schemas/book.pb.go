@@ -97,6 +97,7 @@ type Book struct {
 	Title         string                 `protobuf:"bytes,2,opt,name=title,proto3" json:"title,omitempty"`
 	Authors       []*Author              `protobuf:"bytes,3,rep,name=authors,proto3" json:"authors,omitempty"`
 	Publisher     *Publisher             `protobuf:"bytes,4,opt,name=publisher,proto3" json:"publisher,omitempty"`
+	Genre         Genre                  `protobuf:"varint,5,opt,name=genre,proto3,enum=schema.Genre" json:"genre,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -157,6 +158,13 @@ func (x *Book) GetPublisher() *Publisher {
 		return x.Publisher
 	}
 	return nil
+}
+
+func (x *Book) GetGenre() Genre {
+	if x != nil {
+		return x.Genre
+	}
+	return Genre_ACTION
 }
 
 type Books struct {
@@ -355,12 +363,13 @@ var File_cmd_schemas_book_proto protoreflect.FileDescriptor
 
 const file_cmd_schemas_book_proto_rawDesc = "" +
 	"\n" +
-	"\x16cmd/schemas/book.proto\x12\x06schema\"\x87\x01\n" +
+	"\x16cmd/schemas/book.proto\x12\x06schema\"\xac\x01\n" +
 	"\x04Book\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\rR\x02id\x12\x14\n" +
 	"\x05title\x18\x02 \x01(\tR\x05title\x12(\n" +
 	"\aauthors\x18\x03 \x03(\v2\x0e.schema.AuthorR\aauthors\x12/\n" +
-	"\tpublisher\x18\x04 \x01(\v2\x11.schema.PublisherR\tpublisher\"+\n" +
+	"\tpublisher\x18\x04 \x01(\v2\x11.schema.PublisherR\tpublisher\x12#\n" +
+	"\x05genre\x18\x05 \x01(\x0e2\r.schema.GenreR\x05genre\"+\n" +
 	"\x05Books\x12\"\n" +
 	"\x05books\x18\x01 \x03(\v2\f.schema.BookR\x05books\",\n" +
 	"\x06Author\x12\x0e\n" +
@@ -411,13 +420,14 @@ var file_cmd_schemas_book_proto_goTypes = []any{
 var file_cmd_schemas_book_proto_depIdxs = []int32{
 	3, // 0: schema.Book.authors:type_name -> schema.Author
 	5, // 1: schema.Book.publisher:type_name -> schema.Publisher
-	1, // 2: schema.Books.books:type_name -> schema.Book
-	3, // 3: schema.Authors.authors:type_name -> schema.Author
-	4, // [4:4] is the sub-list for method output_type
-	4, // [4:4] is the sub-list for method input_type
-	4, // [4:4] is the sub-list for extension type_name
-	4, // [4:4] is the sub-list for extension extendee
-	0, // [0:4] is the sub-list for field type_name
+	0, // 2: schema.Book.genre:type_name -> schema.Genre
+	1, // 3: schema.Books.books:type_name -> schema.Book
+	3, // 4: schema.Authors.authors:type_name -> schema.Author
+	5, // [5:5] is the sub-list for method output_type
+	5, // [5:5] is the sub-list for method input_type
+	5, // [5:5] is the sub-list for extension type_name
+	5, // [5:5] is the sub-list for extension extendee
+	0, // [0:5] is the sub-list for field type_name
 }
 
 func init() { file_cmd_schemas_book_proto_init() }
