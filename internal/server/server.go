@@ -35,6 +35,7 @@ func (s Server) registerRoutes() http.Handler {
 
 	r.Route("/protobuf", func(r chi.Router) {
 		r.Get("/authors", s.GetAllAuthors)
+		r.Get("/books", s.GetAllBooks)
 	})
 
 	r.Route("/json", func(r chi.Router) {
