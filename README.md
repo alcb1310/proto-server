@@ -1,3 +1,5 @@
+<img width="1134" height="425" alt="protobuf" src="https://github.com/user-attachments/assets/391ee322-69d8-4bcc-a0ac-bee2092cc3c6" />
+
 # Protobuf Tutorial
 
 This project is a tutorial on working with `protobuf` in Go using a `REST` server having the following features:
