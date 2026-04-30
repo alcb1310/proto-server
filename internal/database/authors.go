@@ -2,8 +2,8 @@ package database
 
 import pb "github.com/alcb1310/proto-server/cmd/schemas"
 
-func (s *service) GetAuthors() (pb.Authors, error) {
-	a := pb.Authors{
+func (s *service) GetAuthors() (*pb.Authors, error) {
+	a := &pb.Authors{
 		Authors: []*pb.Author{
 			{
 				Id:   1,

@@ -14,7 +14,7 @@ func (s *Server) GetAllAuthors(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	resp, err := proto.Marshal(&authors)
+	resp, err := proto.Marshal(authors)
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
