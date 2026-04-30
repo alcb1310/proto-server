@@ -8,7 +8,7 @@ This project is a tutorial on working with `protobuf` in Go using a `REST` serve
 
 ## Technologies Used
 
-- ![Go](https://img.shields.io/badge/GDScript-%23FFAFF3.svg?style=for-the-badge&logo=go&logoColor=white)
+- ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white)
 - [Chi-Router](https://go-chi.io)
 - [Protobuf](https://protobuf.dev/)
 - [JSON](https://json.org/)
