@@ -4,17 +4,20 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/alcb1310/proto-server/internal/database"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 )
 
 type Server struct {
 	port uint
+	DB   database.Database
 }
 
 func New(port uint) http.Server {
 	srv := Server{
 		port: port,
+		DB:   database.New(),
 	}
 
 	return http.Server{
@@ -29,6 +32,10 @@ func (s Server) registerRoutes() http.Handler {
 	r.Use(middleware.Logger)
 
 	r.Get("/", homeRoute)
+
+	r.Route("/protobuf", func(r chi.Router) {
+		r.Get("/authors", s.GetAllAuthors)
+	})
 
 	return r
 }
