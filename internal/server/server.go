@@ -37,6 +37,10 @@ func (s Server) registerRoutes() http.Handler {
 		r.Get("/authors", s.GetAllAuthors)
 	})
 
+	r.Route("/json", func(r chi.Router) {
+		r.Get("/authors", s.JSONGetAllAuthors)
+	})
+
 	return r
 }
 
