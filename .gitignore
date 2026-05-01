@@ -2,3 +2,5 @@ bin
 tmp
 authors.bin
 authors.json
+books.bin
+books.json
