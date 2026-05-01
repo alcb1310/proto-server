@@ -27,7 +27,7 @@ In order to follow this tutorial you will need the following:
 Clone the repository:
 
 ```bash
-git clone https://github.com/alcb1310/proto-server.git
+git clone --recurse-submodules https://github.com/alcb1310/proto-server.git
 cd proto-server
 go mod tidy
 ```
