@@ -34,7 +34,11 @@ func (s Server) registerRoutes() http.Handler {
 	r.Get("/", homeRoute)
 
 	r.Route("/protobuf", func(r chi.Router) {
-		r.Get("/authors", s.GetAllAuthors)
+		r.Route("/authors", func(r chi.Router) {
+			r.Post("/", s.AddAuthor)
+			r.Get("/", s.GetAllAuthors)
+		})
+
 		r.Get("/books", s.GetAllBooks)
 	})
 

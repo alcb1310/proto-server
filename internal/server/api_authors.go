@@ -26,6 +26,7 @@ func (s *Server) GetAllAuthors(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/protobuf")
 	w.Write(resp)
 }
+
 func (s *Server) JSONGetAllAuthors(w http.ResponseWriter, r *http.Request) {
 	encodedAuthors, err := s.DB.GetAuthors()
 	if err != nil {
@@ -44,4 +45,8 @@ func (s *Server) JSONGetAllAuthors(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("% x\n", authors)
 	w.Header().Set("Content-Type", "application/json")
 	_ = json.NewEncoder(w).Encode(authors)
+}
+
+func (s *Server) AddAuthor(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusNotImplemented)
 }
