@@ -3,8 +3,10 @@ package server
 import (
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/http"
 
+	pb "github.com/alcb1310/proto-server/cmd/schemas"
 	"google.golang.org/protobuf/proto"
 )
 
@@ -48,5 +50,20 @@ func (s *Server) JSONGetAllAuthors(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *Server) AddAuthor(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusNotImplemented)
+	body, err := io.ReadAll(r.Body)
+	if err != nil {
+		w.WriteHeader(http.StatusInternalServerError)
+		w.Write([]byte(err.Error()))
+		return
+	}
+	defer r.Body.Close()
+
+	author := &pb.Author{}
+	if err := proto.Unmarshal(body, author); err != nil {
+		http.Error(w, fmt.Sprintf("failed to unmarshal body: %v", err), http.StatusBadRequest)
+		return
+	}
+
+	w.WriteHeader(http.StatusCreated)
+	fmt.Fprintf(w, "Created author with name: %s", author.Name)
 }
