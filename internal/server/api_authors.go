@@ -64,6 +64,7 @@ func (s *Server) AddAuthor(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	fmt.Printf("%s\n", author.Name)
 	w.WriteHeader(http.StatusCreated)
 	fmt.Fprintf(w, "Created author with name: %s", author.Name)
 }
