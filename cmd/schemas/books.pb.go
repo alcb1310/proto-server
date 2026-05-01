@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.11
 // 	protoc        v7.34.1
-// source: cmd/schemas/book.proto
+// source: schemas/books.proto
 
 package schemas
 
@@ -75,11 +75,11 @@ func (x Genre) String() string {
 }
 
 func (Genre) Descriptor() protoreflect.EnumDescriptor {
-	return file_cmd_schemas_book_proto_enumTypes[0].Descriptor()
+	return file_schemas_books_proto_enumTypes[0].Descriptor()
 }
 
 func (Genre) Type() protoreflect.EnumType {
-	return &file_cmd_schemas_book_proto_enumTypes[0]
+	return &file_schemas_books_proto_enumTypes[0]
 }
 
 func (x Genre) Number() protoreflect.EnumNumber {
@@ -88,7 +88,7 @@ func (x Genre) Number() protoreflect.EnumNumber {
 
 // Deprecated: Use Genre.Descriptor instead.
 func (Genre) EnumDescriptor() ([]byte, []int) {
-	return file_cmd_schemas_book_proto_rawDescGZIP(), []int{0}
+	return file_schemas_books_proto_rawDescGZIP(), []int{0}
 }
 
 type Book struct {
@@ -104,7 +104,7 @@ type Book struct {
 
 func (x *Book) Reset() {
 	*x = Book{}
-	mi := &file_cmd_schemas_book_proto_msgTypes[0]
+	mi := &file_schemas_books_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -116,7 +116,7 @@ func (x *Book) String() string {
 func (*Book) ProtoMessage() {}
 
 func (x *Book) ProtoReflect() protoreflect.Message {
-	mi := &file_cmd_schemas_book_proto_msgTypes[0]
+	mi := &file_schemas_books_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -129,7 +129,7 @@ func (x *Book) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Book.ProtoReflect.Descriptor instead.
 func (*Book) Descriptor() ([]byte, []int) {
-	return file_cmd_schemas_book_proto_rawDescGZIP(), []int{0}
+	return file_schemas_books_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Book) GetId() uint32 {
@@ -176,7 +176,7 @@ type Books struct {
 
 func (x *Books) Reset() {
 	*x = Books{}
-	mi := &file_cmd_schemas_book_proto_msgTypes[1]
+	mi := &file_schemas_books_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -188,7 +188,7 @@ func (x *Books) String() string {
 func (*Books) ProtoMessage() {}
 
 func (x *Books) ProtoReflect() protoreflect.Message {
-	mi := &file_cmd_schemas_book_proto_msgTypes[1]
+	mi := &file_schemas_books_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -201,7 +201,7 @@ func (x *Books) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Books.ProtoReflect.Descriptor instead.
 func (*Books) Descriptor() ([]byte, []int) {
-	return file_cmd_schemas_book_proto_rawDescGZIP(), []int{1}
+	return file_schemas_books_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Books) GetBooks() []*Book {
@@ -221,7 +221,7 @@ type Author struct {
 
 func (x *Author) Reset() {
 	*x = Author{}
-	mi := &file_cmd_schemas_book_proto_msgTypes[2]
+	mi := &file_schemas_books_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -233,7 +233,7 @@ func (x *Author) String() string {
 func (*Author) ProtoMessage() {}
 
 func (x *Author) ProtoReflect() protoreflect.Message {
-	mi := &file_cmd_schemas_book_proto_msgTypes[2]
+	mi := &file_schemas_books_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -246,7 +246,7 @@ func (x *Author) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Author.ProtoReflect.Descriptor instead.
 func (*Author) Descriptor() ([]byte, []int) {
-	return file_cmd_schemas_book_proto_rawDescGZIP(), []int{2}
+	return file_schemas_books_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *Author) GetId() uint32 {
@@ -272,7 +272,7 @@ type Authors struct {
 
 func (x *Authors) Reset() {
 	*x = Authors{}
-	mi := &file_cmd_schemas_book_proto_msgTypes[3]
+	mi := &file_schemas_books_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -284,7 +284,7 @@ func (x *Authors) String() string {
 func (*Authors) ProtoMessage() {}
 
 func (x *Authors) ProtoReflect() protoreflect.Message {
-	mi := &file_cmd_schemas_book_proto_msgTypes[3]
+	mi := &file_schemas_books_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -297,7 +297,7 @@ func (x *Authors) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Authors.ProtoReflect.Descriptor instead.
 func (*Authors) Descriptor() ([]byte, []int) {
-	return file_cmd_schemas_book_proto_rawDescGZIP(), []int{3}
+	return file_schemas_books_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *Authors) GetAuthors() []*Author {
@@ -317,7 +317,7 @@ type Publisher struct {
 
 func (x *Publisher) Reset() {
 	*x = Publisher{}
-	mi := &file_cmd_schemas_book_proto_msgTypes[4]
+	mi := &file_schemas_books_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -329,7 +329,7 @@ func (x *Publisher) String() string {
 func (*Publisher) ProtoMessage() {}
 
 func (x *Publisher) ProtoReflect() protoreflect.Message {
-	mi := &file_cmd_schemas_book_proto_msgTypes[4]
+	mi := &file_schemas_books_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -342,7 +342,7 @@ func (x *Publisher) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Publisher.ProtoReflect.Descriptor instead.
 func (*Publisher) Descriptor() ([]byte, []int) {
-	return file_cmd_schemas_book_proto_rawDescGZIP(), []int{4}
+	return file_schemas_books_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *Publisher) GetId() uint32 {
@@ -359,11 +359,11 @@ func (x *Publisher) GetName() string {
 	return ""
 }
 
-var File_cmd_schemas_book_proto protoreflect.FileDescriptor
+var File_schemas_books_proto protoreflect.FileDescriptor
 
-const file_cmd_schemas_book_proto_rawDesc = "" +
+const file_schemas_books_proto_rawDesc = "" +
 	"\n" +
-	"\x16cmd/schemas/book.proto\x12\x06schema\"\xac\x01\n" +
+	"\x13schemas/books.proto\x12\x06schema\"\xac\x01\n" +
 	"\x04Book\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\rR\x02id\x12\x14\n" +
 	"\x05title\x18\x02 \x01(\tR\x05title\x12(\n" +
@@ -396,20 +396,20 @@ const file_cmd_schemas_book_proto_rawDesc = "" +
 	"\tTECHNICAL\x10\tB.Z,github.com/alcb1310/proto-server/cmd/schemasb\x06proto3"
 
 var (
-	file_cmd_schemas_book_proto_rawDescOnce sync.Once
-	file_cmd_schemas_book_proto_rawDescData []byte
+	file_schemas_books_proto_rawDescOnce sync.Once
+	file_schemas_books_proto_rawDescData []byte
 )
 
-func file_cmd_schemas_book_proto_rawDescGZIP() []byte {
-	file_cmd_schemas_book_proto_rawDescOnce.Do(func() {
-		file_cmd_schemas_book_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_cmd_schemas_book_proto_rawDesc), len(file_cmd_schemas_book_proto_rawDesc)))
+func file_schemas_books_proto_rawDescGZIP() []byte {
+	file_schemas_books_proto_rawDescOnce.Do(func() {
+		file_schemas_books_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_schemas_books_proto_rawDesc), len(file_schemas_books_proto_rawDesc)))
 	})
-	return file_cmd_schemas_book_proto_rawDescData
+	return file_schemas_books_proto_rawDescData
 }
 
-var file_cmd_schemas_book_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
-var file_cmd_schemas_book_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
-var file_cmd_schemas_book_proto_goTypes = []any{
+var file_schemas_books_proto_enumTypes = make([]protoimpl.EnumInfo, 1)
+var file_schemas_books_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
+var file_schemas_books_proto_goTypes = []any{
 	(Genre)(0),        // 0: schema.Genre
 	(*Book)(nil),      // 1: schema.Book
 	(*Books)(nil),     // 2: schema.Books
@@ -417,7 +417,7 @@ var file_cmd_schemas_book_proto_goTypes = []any{
 	(*Authors)(nil),   // 4: schema.Authors
 	(*Publisher)(nil), // 5: schema.Publisher
 }
-var file_cmd_schemas_book_proto_depIdxs = []int32{
+var file_schemas_books_proto_depIdxs = []int32{
 	3, // 0: schema.Book.authors:type_name -> schema.Author
 	5, // 1: schema.Book.publisher:type_name -> schema.Publisher
 	0, // 2: schema.Book.genre:type_name -> schema.Genre
@@ -430,27 +430,27 @@ var file_cmd_schemas_book_proto_depIdxs = []int32{
 	0, // [0:5] is the sub-list for field type_name
 }
 
-func init() { file_cmd_schemas_book_proto_init() }
-func file_cmd_schemas_book_proto_init() {
-	if File_cmd_schemas_book_proto != nil {
+func init() { file_schemas_books_proto_init() }
+func file_schemas_books_proto_init() {
+	if File_schemas_books_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_cmd_schemas_book_proto_rawDesc), len(file_cmd_schemas_book_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_schemas_books_proto_rawDesc), len(file_schemas_books_proto_rawDesc)),
 			NumEnums:      1,
 			NumMessages:   5,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_cmd_schemas_book_proto_goTypes,
-		DependencyIndexes: file_cmd_schemas_book_proto_depIdxs,
-		EnumInfos:         file_cmd_schemas_book_proto_enumTypes,
-		MessageInfos:      file_cmd_schemas_book_proto_msgTypes,
+		GoTypes:           file_schemas_books_proto_goTypes,
+		DependencyIndexes: file_schemas_books_proto_depIdxs,
+		EnumInfos:         file_schemas_books_proto_enumTypes,
+		MessageInfos:      file_schemas_books_proto_msgTypes,
 	}.Build()
-	File_cmd_schemas_book_proto = out.File
-	file_cmd_schemas_book_proto_goTypes = nil
-	file_cmd_schemas_book_proto_depIdxs = nil
+	File_schemas_books_proto = out.File
+	file_schemas_books_proto_goTypes = nil
+	file_schemas_books_proto_depIdxs = nil
 }
